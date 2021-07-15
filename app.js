@@ -2,14 +2,13 @@ const express = require('express');
 const app = express();
 const port = 3030;
 app.use(express.static('public'));
-const indexRouters = require('./routers/index');
-const aboutRouter = require('./routers/about');
+const indexRouter = require('./routers/index');
 
 
 //enrutamiento
 //index
-app.use('/', indexRouters);
-app.use('/about', aboutRouter);
+app.use('/', indexRouter);
+app.use('/about', indexRouter);
 
 
 
